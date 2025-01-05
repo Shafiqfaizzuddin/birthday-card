@@ -35,9 +35,9 @@ body {
 
 .carousel {
   display: flex;
-  width: 400%;
+  width: 600%; /* Changed from 400% to accommodate 6 images */
   height: 100%;
-  animation: carousel 20s infinite;
+  animation: carousel 30s infinite; /* Increased from 20s to give each image enough display time */
 }
 
 .carousel:hover {
@@ -45,7 +45,7 @@ body {
 }
 
 .carousel-item {
-  width: 25%;
+  width: 16.666%; /* Changed from 25% to accommodate 6 images (100/6) */
   height: 100%;
   display: flex;
   justify-content: center;
@@ -60,17 +60,23 @@ body {
 }
 
 @keyframes carousel {
-  0%, 20% {
+  0%, 13.33% {
     transform: translateX(0);
   }
-  25%, 45% {
-    transform: translateX(-25%);
+  16.66%, 30% {
+    transform: translateX(-16.666%);
   }
-  50%, 70% {
-    transform: translateX(-50%);
+  33.33%, 46.66% {
+    transform: translateX(-33.332%);
   }
-  75%, 95% {
-    transform: translateX(-75%);
+  50%, 63.33% {
+    transform: translateX(-49.998%);
+  }
+  66.66%, 80% {
+    transform: translateX(-66.664%);
+  }
+  83.33%, 96.66% {
+    transform: translateX(-83.33%);
   }
   100% {
     transform: translateX(0);
